@@ -13,6 +13,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     clean: true,
   },
   module: {
@@ -37,6 +38,7 @@ module.exports = {
     }),
   ],
   devServer: {
+    historyApiFallback: true, // 개발시에만.
     port: 8080,
   },
 }
